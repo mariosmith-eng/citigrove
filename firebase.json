@@ -28,7 +28,7 @@
     "rewrites": [
       {
         "source": "/api/media",
-        "function": "nextServer",
+        "function": "citigroveMedia",
         "region": "us-east1"
       }
     ]
