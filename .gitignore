@@ -35,6 +35,9 @@ yarn-error.log*
 .env
 .env.local
 .env.*.local
+# functions/.env only has non-sensitive values (client email, bucket name)
+# CITIGROVE_GCS_PRIVATE_KEY is stored in Firebase Secret Manager
+!functions/.env
 
 # vercel
 .vercel
@@ -58,6 +61,3 @@ infra/.terraform/
 infra/terraform.tfstate
 infra/terraform.tfstate.backup
 infra/*.tfvars
-
-# functions env (actual, not example)
-functions/.env

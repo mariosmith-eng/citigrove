@@ -41,7 +41,7 @@ jobs:
         run: |
           echo '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}' > /tmp/sa.json
           GOOGLE_APPLICATION_CREDENTIALS=/tmp/sa.json \
-            npx firebase-tools deploy --only hosting:site \
+            npx firebase-tools deploy --only functions,hosting:site \
               --project organic-spirit-488116-e2 \
               --non-interactive --force
           rm -f /tmp/sa.json
