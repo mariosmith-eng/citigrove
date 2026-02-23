@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/functions/node_modules
 /.pnp
 .pnp.*
 .yarn/*
@@ -30,8 +31,10 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# env files — keep the example, ignore the rest
+.env
+.env.local
+.env.*.local
 
 # vercel
 .vercel
@@ -39,3 +42,22 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Firebase / GCP service account keys — NEVER commit these
+firebase-service-account.json
+gcs-service-account.json
+*.json.key
+
+# Firebase build artifacts copied to public/
+public/_next/
+public/index.html
+public/404.html
+
+# Terraform (also covered by infra/.gitignore)
+infra/.terraform/
+infra/terraform.tfstate
+infra/terraform.tfstate.backup
+infra/*.tfvars
+
+# functions env (actual, not example)
+functions/.env

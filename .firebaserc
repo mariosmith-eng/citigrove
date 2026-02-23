@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "organic-spirit-488116-e2"
+  },
+  "targets": {
+    "organic-spirit-488116-e2": {
+      "hosting": {
+        "site": [
+          "citigrove"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

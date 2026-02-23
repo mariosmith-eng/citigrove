@@ -1,0 +1,21 @@
+# Copy this file to terraform.tfvars and fill in your values:
+#   cp terraform.tfvars.example terraform.tfvars
+
+# Shared GCP project (same org as brighthornmedia / essicommercial)
+project_id   = "organic-spirit-488116-e2"
+region       = "us-east1"
+environment  = "production"
+
+bucket_name     = "citigrove-images"   # must be globally unique
+bucket_location = "US"
+
+allowed_origins = [
+  "https://citigrove.web.app",
+  "https://citigrove.com",
+  "https://www.citigrove.com",
+  "http://localhost:3000",
+  "http://localhost:3001",
+]
+
+firebase_site_id              = "citigrove"   # must be globally unique on Firebase
+firebase_web_app_display_name = "CitiGrove Web"
